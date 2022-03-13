@@ -64,17 +64,17 @@ fun main() {
 
 //Assign the if statement to a variable
     val currentAge = when {
-        age >=drinkingAge -> {
+        age >= drinkingAge -> {
             println("Now you may drink in the US")
 /* return the value for this block */
             drinkingAge
         }
-        age >=votingAge -> {
+        age >= votingAge -> {
             println("You may vote now")
 //return the value for this block
             votingAge
         }
-        age>=drivingAge -> {
+        age >= drivingAge -> {
             println("You may drive now")
 //return the value for this block
             drivingAge
@@ -87,9 +87,41 @@ fun main() {
     }
 
     var season = 3
-    when (season){
+    when (season) {
         1 -> println("Spring")
-        in 2..4 -> print ("Summer")
+        in 2..4 -> print("Summer")
         else -> println("Other")
     }
+
+    var x = 100
+    while (x >= 0){
+        println("$x")
+        x-=2
+    }
+    println("pepe")
+
+    var feltTemp = "cold"
+    var roomTemp = 10
+    while (feltTemp == "cold"){
+        roomTemp++
+        if(roomTemp >= 20){
+            feltTemp = "comfy"
+            println("It's comfy now")
+        }
+    }
+    for (num in 10 downTo 1 step 2) println ("$num")
+
+    for (i in 0..10000){
+        if (i == 9001) println("It's over 9000!!!")
+    }
+    var humidityLevel = 80
+    var humidity = "Humid"
+    while (humidityLevel >= 60){
+        humidityLevel -= 5
+        println("Humidity decreased")
+    }
+    println("It's comfy now")
+    humidity = "Comfy"
+
+
 }
